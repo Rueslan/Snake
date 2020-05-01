@@ -10,6 +10,8 @@ namespace Snake_game
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Try-1");
+            Console.ReadKey();
         }
     }
 }
