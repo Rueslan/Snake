@@ -51,8 +51,8 @@ namespace Snake_game
                     snake.HandleKey(key.Key);
                 }
             }
-
             PrintToCenter("Разработчик: Руслан К. г.Сарапул\r");
+            Console.ReadKey();
 
         }
 
@@ -74,7 +74,11 @@ namespace Snake_game
         }
         static void PrintToCenter(string msg)
         {
+            string go;
+            go = "GAME OVER";
             Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.SetCursorPosition(Console.WindowWidth / 2 - go.Length / 2, Console.WindowHeight / 2 - 1);
+            Console.WriteLine(go);
             Console.SetCursorPosition(Console.WindowWidth / 2 - msg.Length / 2, Console.WindowHeight / 2);
             Console.WriteLine(msg);
             Console.ForegroundColor = ConsoleColor.White;
