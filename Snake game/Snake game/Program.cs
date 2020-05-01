@@ -17,5 +17,16 @@ namespace Snake_game
 
             Console.ReadKey();
         }
+
+        public static void Move(Point p, int dx, int dy)
+        {
+            p.x += dx;
+            p.y += dy;
+        }
+        public static void Reset(Point p)
+        {
+            p = new Point();
+        }
+
     }
 }
