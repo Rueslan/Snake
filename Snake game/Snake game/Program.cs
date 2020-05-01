@@ -11,16 +11,16 @@ namespace Snake_game
         static void Main(string[] args)
         {
             Point p1 = new Point(1, 3, '#');
+            Point p2 = new Point(2, 7, '#');
             p1.Draw();
-            Point p2 = new Point(4, 5, '*');
-            p2.Draw();
-            Console.ReadKey();
-            Move(p2, 10, 10);
-            p2.Draw();
-            Console.ReadKey();
-            Reset(p2);
-            Console.WriteLine($"{p2.x}{p2.y}{p2.sym}");
-            p2.Draw();
+            Reset(p1);
+            List<Point> numList = new List<Point>();
+            numList.Add(p1);
+            numList.Add(p2);
+            foreach(Point i in numList)
+            {
+                i.Draw();
+            }
 
             Console.ReadKey();
         }
