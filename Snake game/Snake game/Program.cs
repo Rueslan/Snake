@@ -52,6 +52,8 @@ namespace Snake_game
                 }
             }
 
+            PrintToCenter("Разработчик: Руслан К. г.Сарапул\r");
+
         }
 
         public static void Move(Point p, int dx, int dy)
@@ -69,6 +71,13 @@ namespace Snake_game
         static void Draw(Figure figure)
         {
             figure.Draw();
+        }
+        static void PrintToCenter(string msg)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.SetCursorPosition(Console.WindowWidth / 2 - msg.Length / 2, Console.WindowHeight / 2);
+            Console.WriteLine(msg);
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
     }
