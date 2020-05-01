@@ -14,6 +14,13 @@ namespace Snake_game
             p1.Draw();
             Point p2 = new Point(4, 5, '*');
             p2.Draw();
+            Console.ReadKey();
+            Move(p2, 10, 10);
+            p2.Draw();
+            Console.ReadKey();
+            Reset(p2);
+            Console.WriteLine($"{p2.x}{p2.y}{p2.sym}");
+            p2.Draw();
 
             Console.ReadKey();
         }
@@ -25,7 +32,9 @@ namespace Snake_game
         }
         public static void Reset(Point p)
         {
-            p = new Point();
+            p.x = 0;
+            p.y = 0;
+            p.sym = '\0';
         }
 
     }
